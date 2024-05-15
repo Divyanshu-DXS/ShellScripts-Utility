@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# To use any of the formats below just uncomment them and run the script or copy/paste of the same.
+# In case if you would like to permanently need to use any one of these prompts you can do so by following the steps below: 
+# open or create a .bashrc file on the ~/ location 
+# Enter the command or format needed in the .bashrc file
+# Source the file if not already done so
+# When you start an interactive non-login shell (such as when you open a new terminal window), Bash reads the ~/.bashrc file.
+# If ~/.bash_profile or ~/.profile exists, they often contain code to source ~/.bashrc for setting up the environment.
+
+# Commands below can be used to create your own prompt
+# \u	Current username 
+# \h	Hostname
+# \w 	Current working directory
+# \d	Date (Mon Feb 6)
+# \D{%Y-%m-%d}	Date (YYYY-MM-DD)
+# \H	Full hostname
+# \j	Number of jobs managed by the shell
+# \n	Newline
+# \r	Carriage return
+# \s	Name of the shell
+# \t	Current time 24-hour (HH:MM:SS)
+# \T	Current time 12-hour (HH:MM:SS)
+# \@	Current time
+# \u	Current username
+# \w	Full path of the current working directory
+ 
+
+# Format: bin username$█
+# PS1='\W \u\\$'
+
+# Format: hostname: bin :username$█ -->  where the 'Working Directory' is listed in a different color to focus on the current workspace on the machine 
+# PS1='\h:\[\e[38;5;22;107m\] \[\e[38;5;234;48;5;214m\]\W\[\e[38;5;22;107m\] \[\e[0m\]:\u\\$'
+
+# Format: Wed May 15|06:18 PM username: bin: master$█
+# PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\d|\@ \u: \W: ${PS1_CMD1}\$'
+
+# Format: Wed May 15|06:31 PMbash bin: username$█
+# PS1='\[\e[38;5;234;48;5;214m\]\d\[\e[0m\]|\@\s \[\e[38;5;234;48;5;214m\]\W\[\e[38;5;235m\]:\[\e[0m\] \u\$'
