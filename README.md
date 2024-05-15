@@ -15,7 +15,7 @@ This repository contains a collection of shell scripts developed for various pur
 
     - Usage:  Elevate your terminal interactions with SysInit Dashboard, offering a delightful user experience for Linux enthusiasts. Immerse yourself in the geeky vibe of the command line interface, igniting your passion for coding and exploration. Get ready to code, create, and conquer with SysInit Dashboard.
 
-3. **BashPromp Generator**: Customize your terminal window and have custom prompts the way you like it. 
+3. **BashPrompt Generator**: Customize your terminal window and have custom prompts the way you like it. 
     - Description:  Enhance your terminal experience with customizable prompts. This collection of pre-defined prompts allows you to personalize your terminal to suit your needs, whether you prefer functional utility or creative flair. Each prompt can be easily modified to fit your preferences, providing you with a dynamic and personalized command-line interface.
 
     - Usage:  Explore the predefined font formats and select the one that suits your preference. Choose the corresponding command without the '#' and execute it on your system for testing. To permanently apply the command, consider saving it in your ~/.bashrc file. Ensure that the .bashrc file is sourced (source ~/.bashrc), and that the .bash_profile or .profile file configures it in the environment.
