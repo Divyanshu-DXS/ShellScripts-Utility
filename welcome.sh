@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# The code below is from the welcome script that runs when this scipt is executed
+echo -e " \n"
 echo "DDDDDDDDDDDDD        XXXXXXX       XXXXXXX    SSSSSSSSSSSSSSS "
 echo "D::::::::::::DDD     X:::::X       X:::::X  SS:::::::::::::::S"
 echo "D:::::::::::::::DD   X:::::X       X:::::X S:::::SSSSSS::::::S"
@@ -20,9 +21,16 @@ echo "                                                              "
 echo "                         WELCOME HOME!                        "
 echo "                   THIS IS $USER'S COMPUTER.                  "
 echo "DATE: "
-date
-echo "Calender: "
-cal
+date +"%A, %B %d, %Y %H:%M:%S"
+echo " "
+echo -e " -x-x-x-x-x-x-x-x-x-x-\n"
+echo -e "Calender:\n"
+ncal -3
+echo " "
+cd /Users/sharma/Desktop
+echo "Current Directory: $(pwd) "
+ls -1 -F
+# welome.sh script ends.
 
 
 osascript <<EOF
@@ -31,6 +39,10 @@ tell application "Terminal"
     delay 1 # Wait for Terminal to activate
     do script "/bin/bash ~/welcome.sh" # Run the welcome.sh script
     delay 1 # Wait for the welcome.sh script to execute
-    set the bounds of the first window to {0, 0, 1600, 1800} # Adjust the dimensions according to your screen resolution
+    
+    set screenWidth to 2560 # Replace this with your screen width
+    set screenHeight to 1600 # Replace this with your screen height
+    
+    set the bounds of the first window to {0, 0, screenWidth, screenHeight} # Set window bounds based on screen resolution
 end tell
 EOF
