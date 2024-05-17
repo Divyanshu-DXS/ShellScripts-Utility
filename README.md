@@ -19,6 +19,18 @@ This repository contains a collection of shell scripts developed for various pur
     - Description:  Enhance your terminal experience with customizable prompts. This collection of pre-defined prompts allows you to personalize your terminal to suit your needs, whether you prefer functional utility or creative flair. Each prompt can be easily modified to fit your preferences, providing you with a dynamic and personalized command-line interface.
 
     - Usage:  Explore the predefined font formats and select the one that suits your preference. Choose the corresponding command without the '#' and execute it on your system for testing. To permanently apply the command, consider saving it in your ~/.bashrc file. Ensure that the .bashrc file is sourced (source ~/.bashrc), and that the .bash_profile or .profile file configures it in the environment.
+
+3. **SysMonitor**: Your system monitoring companion. 
+    - Description:  Experience a sleek and powerful terminal utility with SysSpectre, your go-to script for real-time system monitoring. This script provides a comprehensive overview of your system's performance, displaying essential information such as CPU usage, memory statistics, disk usage, and network activity. With SysSpectre, you can effortlessly keep an eye on your system's health, ensuring optimal performance and efficiency. Designed with a focus on clarity and functionality, SysSpectre transforms your terminal into a robust monitoring tool, perfect for tech enthusiasts and power users alike.
+
+    - Usage: Just run the script to begin monitoring your system (./sysMonitor). Ensure that the script has executable permissions. If not, you can easily set them up using chmod +x sysMonitor.
+    
+    FEATURES:
+    : CPU Usage Monitoring: Get an instant snapshot of your CPU usage to identify resource-intensive processes.
+    : Memory Usage Details: View active, inactive, and free memory pages converted into megabytes for easy understanding.
+    : Disk Usage Overview: Keep track of your disk space utilization across all mounted filesystems.
+    : Network Activity Insight: Monitor network interfaces and traffic statistics.
+
     
 ## Contributing
 
