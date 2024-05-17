@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Display CPU usage
+echo "CPU Usage:"
+top -l 1 | grep "CPU usage"
+
+# Display Memory usage
+echo -e "\nMemory Usage:"
+vm_stat | grep "Pages active\|Pages inactive\|Pages free"
+
+# Display Disk usage
+echo -e "\nDisk Usage:"
+df -h
+
+# Display Network usage
+echo -e "\nNetwork Usage:"
+netstat -i
+
