@@ -1,12 +1,38 @@
 #!/bin/bash
 
+# Function to convert pages to MB
+pages_to_mb() {
+  echo $(( $1 * 4 / 1024 ))
+}
+
 # Display CPU usage
 echo "CPU Usage:"
 top -l 1 | grep "CPU usage"
 
 # Display Memory usage
 echo -e "\nMemory Usage:"
-vm_stat | grep "Pages active\|Pages inactive\|Pages free"
+vm_stat | grep "Pages free\|Pages active\|Pages inactive"
+
+# Extract memory stats
+pages_free=$(vm_stat | grep "Pages free" | awk '{print $3}' | sed 's/\.//')
+pages_active=$(vm_stat | grep "Pages active" | awk '{print $3}' | sed 's/\.//')
+pages_inactive=$(vm_stat | grep "Pages inactive" | awk '{print $3}' | sed 's/\.//')
+
+# Convert to MB
+free_mb=$(pages_to_mb $pages_free)
+active_mb=$(pages_to_mb $pages_active)
+inactive_mb=$(pages_to_mb $pages_inactive)
+
+# Display converted memory stats
+echo -e "\nMemory Usage in MB:"
+echo "Free memory: ${free_mb} MB"
+echo "Active memory: ${active_mb} MB"
+echo "Inactive memory: ${inactive_mb} MB"
+
+# Display recommendations
+if [ $free_mb -lt 500 ]; then
+  echo -e "\nRecommendation: You have less than 500 MB of free memory. Consider closing unused applications or restarting your computer."
+fi
 
 # Display Disk usage
 echo -e "\nDisk Usage:"
